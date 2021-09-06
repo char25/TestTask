@@ -1,12 +1,10 @@
 package com.hololo.testtask;
 
 import android.content.Context;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,7 +34,7 @@ public class SongsAdapter extends ArrayAdapter<SongModel>{
         final View view = convertView;
 
         TextView SongAuthorTextView = view.findViewById(R.id.SongAuthorTextView);
-       // TextView SongNameTextView = view.findViewById(R.id.SongNameTextView);
+        TextView SongNameTextView = view.findViewById(R.id.SongNameTextView);
 
         return convertView;
     }
