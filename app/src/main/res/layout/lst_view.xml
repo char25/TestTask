@@ -16,21 +16,22 @@
             android:orientation="horizontal" >
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/SongImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
                 android:background="@color/white"
-                android:padding="3sp"
+
                 android:scaleType="centerCrop"
-                android:src="@mipmap/bilie"
+                android:src="@mipmap/bilie_foreground"
                 app:shapeAppearance="@style/RoundImage"/>
 
             <LinearLayout
-                android:layout_margin="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
                     android:textColor="@color/black"
                     android:maxLength="30"
                     android:textSize="20sp"
@@ -39,6 +40,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"></TextView>
                 <TextView
+                    android:paddingLeft="15sp"
+                    android:paddingBottom="5sp"
                     android:textColor="@color/black"
                     android:gravity="bottom"
                     android:textSize="15sp"

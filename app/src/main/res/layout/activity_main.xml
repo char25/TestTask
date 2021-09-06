@@ -12,7 +12,9 @@
         android:layout_height="match_parent">
         <include layout="@layout/appbar"></include>
 
+
         <ListView
+            android:id="@+id/SongsListView"
             android:background="@android:color/transparent"
             android:transcriptMode="alwaysScroll"
             android:layout_height="match_parent"
