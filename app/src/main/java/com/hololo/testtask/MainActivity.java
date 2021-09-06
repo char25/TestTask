@@ -3,6 +3,7 @@ package com.hololo.testtask;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends BaseActivity {
 
@@ -11,6 +12,6 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Log.d("dd", "");
     }
 }
