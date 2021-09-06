@@ -36,7 +36,7 @@ public class SongsAdapter extends ArrayAdapter<SongModel>{
         final View view = convertView;
 
         TextView SongAuthorTextView = view.findViewById(R.id.SongAuthorTextView);
-        TextView SongNameTextView = view.findViewById(R.id.SongNameTextView);
+       // TextView SongNameTextView = view.findViewById(R.id.SongNameTextView);
 
         return convertView;
     }
