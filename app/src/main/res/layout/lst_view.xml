@@ -4,17 +4,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_margin="20sp"
-            android:layout_width="70sp"
-            android:layout_height="70sp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/ProfileAva"
+                android:id="@+id/SongImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -22,7 +23,33 @@
                 android:scaleType="centerCrop"
                 android:src="@mipmap/bilie"
                 app:shapeAppearance="@style/RoundImage"/>
-        </RelativeLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_margin="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:maxLength="30"
+                    android:textSize="20sp"
+                    android:text="Billie Eilish - Happier Than Ever"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></TextView>
+                <TextView
+                    android:textColor="@color/black"
+                    android:gravity="bottom"
+                    android:textSize="15sp"
+                    android:text="Hi its me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 </RelativeLayout>

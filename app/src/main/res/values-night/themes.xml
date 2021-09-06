@@ -17,6 +17,6 @@
     <style name="RoundImage">
         <item name="strokeColor">@color/white</item>
         <item name="strokeWidth">40dp</item>
-        <item name="cornerSize">15%</item>
+        <item name="cornerSize">20%</item>
     </style>
 </resources>
