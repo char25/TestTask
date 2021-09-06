@@ -35,7 +35,8 @@ public class SongsAdapter extends ArrayAdapter<SongModel>{
         convertView = layoutInflater.inflate(mResource, parent, false);
         final View view = convertView;
 
-
+        TextView SongAuthorTextView = view.findViewById(R.id.SongAuthorTextView);
+        TextView SongNameTextView = view.findViewById(R.id.SongNameTextView);
 
         return convertView;
     }
