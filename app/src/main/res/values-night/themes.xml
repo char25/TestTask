@@ -13,4 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="RoundImage">
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">40dp</item>
+        <item name="cornerSize">15%</item>
+    </style>
 </resources>
