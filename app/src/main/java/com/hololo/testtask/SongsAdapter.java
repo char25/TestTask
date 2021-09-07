@@ -34,13 +34,18 @@ public class SongsAdapter extends ArrayAdapter<SongModel>{
         convertView = layoutInflater.inflate(mResource, parent, false);
         final View view = convertView;
 
+        SongModel SongModel = getItem(position);
+
         TextView SongAuthorTextView = view.findViewById(R.id.SongAuthorTextView);
         TextView SongNameTextView = view.findViewById(R.id.SongNameTextView);
+
+        SongAuthorTextView.setText(SongModel.SongAuthor);
+        SongNameTextView.setText(SongModel.SongName);
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.SetFragment(new FragmentPlayer(), mContext);
+                MainActivity.SetFragment(new FragmentPlayer(SongModel), mContext);
             }
         });
 

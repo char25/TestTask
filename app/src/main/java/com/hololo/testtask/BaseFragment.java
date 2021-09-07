@@ -16,13 +16,16 @@ public class BaseFragment extends Fragment {
         RightAppBarIcon = view.findViewById(R.id.RightAppBarIcon);
         LeftAppBarIcon = view.findViewById(R.id.LeftAppBarIcon);
         AppBarText = view.findViewById(R.id.AppBarText);
+        AppBarText.setPadding(60, 0,0,0);
+        LeftAppBarIcon.setVisibility(View.GONE);
     }
 
-    public void LeftButtonClick(int IconId, String Text, View.OnClickListener onClickListener, View view) {
-
+    public void LeftButtonClick(int IconId, String Text, View.OnClickListener onClickListener) {
+        RightAppBarIcon.setVisibility(View.GONE);
+        LeftAppBarIcon.setVisibility(View.VISIBLE);
         LeftAppBarIcon.setImageDrawable(getResources().getDrawable(IconId));
         AppBarText.setText(Text);
-
+        AppBarText.setPadding(0, 0,0,0);
         LeftAppBarIcon.setOnClickListener(onClickListener);
     }
 }

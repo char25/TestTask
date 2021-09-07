@@ -25,6 +25,7 @@
             app:shapeAppearance="@style/RoundImage"/>
 
         <TextView
+            android:id="@+id/SongNameTextView"
             android:layout_marginHorizontal="20sp"
             android:layout_marginTop="20sp"
             android:gravity="center"
@@ -35,9 +36,11 @@
             android:layout_height="wrap_content"></TextView>
 
         <TextView
+            android:id="@+id/SongAuthorTextView"
+            android:textStyle="bold"
             android:layout_marginHorizontal="20sp"
             android:gravity="center"
-            android:text="Bilie elish"
+            android:text="Unknown"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_width="match_parent"

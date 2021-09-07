@@ -8,25 +8,26 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.FrameLayout;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 
 import com.hololo.testtask.models.SongModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
-    static FragmentTransaction FragTrans;
+    private static FragmentTransaction FragTrans;
+
     public static String TAG;
+    public static ArrayList<SongModel> songModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TAG = this.getClass().getName();
+        songModels = new ArrayList<>();
+
+        new Thread(TestAppend).start();
 
         SetFragment(new FragmentSongsList(), this);
     }
@@ -41,4 +42,13 @@ public class MainActivity extends BaseActivity {
             Log.d(TAG, e.toString());
         }
     }
+
+    private Runnable TestAppend = new Runnable() {
+        @Override
+        public void run() {
+            for (int i = 0; i < 15; i++) {
+                songModels.add(new SongModel(R.mipmap.bilie, "Billie eilish", String.valueOf(i)));
+            }
+        }
+    };
 }

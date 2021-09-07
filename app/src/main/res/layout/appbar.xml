@@ -15,7 +15,7 @@
         android:id="@+id/AppBarText"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:gravity="center|left"
+        android:gravity="center"
         android:text="Songs"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"></TextView>
