@@ -8,9 +8,17 @@ import androidx.fragment.app.Fragment;
 
 public class BaseFragment extends Fragment {
 
+    public ImageView RightAppBarIcon;
+    public ImageView LeftAppBarIcon;
+    public TextView AppBarText;
+
+    public void Init(View view) {
+        RightAppBarIcon = view.findViewById(R.id.RightAppBarIcon);
+        LeftAppBarIcon = view.findViewById(R.id.LeftAppBarIcon);
+        AppBarText = view.findViewById(R.id.AppBarText);
+    }
+
     public void LeftButtonClick(int IconId, String Text, View.OnClickListener onClickListener, View view) {
-        ImageView LeftAppBarIcon = view.findViewById(R.id.LeftAppBarIcon);
-        TextView AppBarText = view.findViewById(R.id.AppBarText);
 
         LeftAppBarIcon.setImageDrawable(getResources().getDrawable(IconId));
         AppBarText.setText(Text);

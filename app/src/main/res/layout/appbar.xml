@@ -7,9 +7,8 @@
 
     <ImageView
         android:id="@+id/LeftAppBarIcon"
-        android:paddingHorizontal="15sp"
-        android:src="@drawable/arr"
-        android:layout_width="wrap_content"
+        android:src="@mipmap/arrow"
+        android:layout_width="70sp"
         android:layout_height="match_parent"></ImageView>
 
     <TextView
@@ -18,7 +17,18 @@
         android:textSize="20sp"
         android:gravity="center|left"
         android:text="Songs"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"></TextView>
+
+    <RelativeLayout
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/RightAppBarIcon"
+            android:src="@mipmap/horizontal_menu"
+            android:layout_width="70sp"
+            android:layout_height="match_parent"></ImageView>
+    </RelativeLayout>
 
 </LinearLayout>

@@ -10,4 +10,7 @@
     <color name="blue">#3388ff</color>
     <color name="shadow_blue">#FF4B79BD</color>
     <color name="purple">#7033ff</color>
+
+    <color name="ocean">#6B89C5</color>
+    <color name="sweet_ocean">#D7EFFF</color>
 </resources>

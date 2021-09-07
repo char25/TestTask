@@ -1,19 +1,15 @@
 package com.hololo.testtask;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.hololo.testtask.models.SongModel;
 
@@ -48,8 +44,7 @@ public class SongsAdapter extends ArrayAdapter<SongModel>{
             }
         });
 
-        Animation anim = AnimationUtils.loadAnimation(mContext, R.anim.slide_left);
-        convertView.startAnimation(anim);
+        convertView.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_right));
 
         return convertView;
     }
