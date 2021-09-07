@@ -1,9 +1,12 @@
 package com.hololo.testtask;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.FrameLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
@@ -14,21 +17,19 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
-    private ListView SongsListView;
-    private ListAdapter CustomAdapter;
+    private FragmentTransaction FragTrans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SongsListView = findViewById(R.id.SongsListView);
+        FragTrans = getSupportFragmentManager().beginTransaction();
+        SetFragment(R.id.FragmentContainer, new FragmentSongsList());
+    }
 
-        ArrayList<SongModel> songModels = new ArrayList<>();
-        songModels.add(new SongModel(R.mipmap.bilie, "Test", ""));
-        songModels.add(new SongModel(R.mipmap.bilie, "Test 1", ""));
-
-        CustomAdapter = new SongsAdapter(this, R.layout.lst_view, songModels);
-        SongsListView.setAdapter(CustomAdapter);
+    private void SetFragment(int id, Fragment ObjFragment) {
+        FragTrans.replace(id, ObjFragment);
+        FragTrans.commit();
     }
 }

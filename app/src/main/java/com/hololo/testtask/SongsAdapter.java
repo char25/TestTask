@@ -1,6 +1,7 @@
 package com.hololo.testtask;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,13 @@ public class SongsAdapter extends ArrayAdapter<SongModel>{
 
         TextView SongAuthorTextView = view.findViewById(R.id.SongAuthorTextView);
         TextView SongNameTextView = view.findViewById(R.id.SongNameTextView);
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("TAG", "onClick: " + position);
+            }
+        });
 
         return convertView;
     }
