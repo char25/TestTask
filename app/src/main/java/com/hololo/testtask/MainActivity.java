@@ -2,8 +2,10 @@ package com.hololo.testtask;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.FrameLayout;
@@ -17,19 +19,26 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
-    private FragmentTransaction FragTrans;
+    static FragmentTransaction FragTrans;
+    public static String TAG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TAG = this.getClass().getName();
 
-        FragTrans = getSupportFragmentManager().beginTransaction();
-        SetFragment(R.id.FragmentContainer, new FragmentSongsList());
+        SetFragment(new FragmentSongsList(), this);
     }
 
-    private void SetFragment(int id, Fragment ObjFragment) {
-        FragTrans.replace(id, ObjFragment);
-        FragTrans.commit();
+    public static void SetFragment(Fragment ObjFragment, Context context) {
+        try {
+            FragTrans = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
+            FragTrans.replace(R.id.FragmentContainer, ObjFragment);
+            FragTrans.commit();
+        }
+        catch (Exception e) {
+            Log.d(TAG, e.toString());
+        }
     }
 }

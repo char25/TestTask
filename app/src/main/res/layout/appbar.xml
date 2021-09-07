@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@drawable/border_header"
     android:layout_height="70sp">
 
+    <ImageView
+        android:id="@+id/LeftAppBarIcon"
+        android:paddingHorizontal="15sp"
+        android:src="@drawable/arr"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"></ImageView>
+
     <TextView
+        android:id="@+id/AppBarText"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:gravity="center"
+        android:gravity="center|left"
         android:text="Songs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

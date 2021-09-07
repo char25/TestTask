@@ -5,12 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".FragmentSongsList">
 
-    <ListView
-        android:id="@+id/SongsListView"
-        android:background="@android:color/transparent"
-        android:transcriptMode="alwaysScroll"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/lst_view"
-        android:layout_width="match_parent"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/appbar"></include>
+        <ListView
+            android:id="@+id/SongsListView"
+            android:background="@android:color/transparent"
+            android:transcriptMode="alwaysScroll"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/lst_view"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
 
 </FrameLayout>
