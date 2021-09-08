@@ -53,6 +53,7 @@ public class FragmentPlayer extends BaseFragment {
             }
         });
 
+        CurrentPos = 0;
         ImageView NextSound = view.findViewById(R.id.NextSound);
         NextSound.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,5 +94,5 @@ public class FragmentPlayer extends BaseFragment {
         });
     }
 
-    static int CurrentPos = 0;
+    static int CurrentPos;
 }
