@@ -11,13 +11,23 @@
         android:layout_height="match_parent">
 
         <include layout="@layout/appbar"></include>
-        <ListView
+        <!--<ListView
             android:id="@+id/SongsListView"
             android:background="@android:color/transparent"
             android:transcriptMode="alwaysScroll"
             android:layout_height="match_parent"
             tools:listitem="@layout/lst_view"
+            android:layout_width="match_parent"/>-->
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/SongsRecycleView"
+            android:background="@android:color/transparent"
+            android:transcriptMode="alwaysScroll"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/lst_view"
             android:layout_width="match_parent"/>
+
+
     </LinearLayout>
 
 </FrameLayout>

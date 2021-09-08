@@ -1,60 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:orientation="horizontal"
+    <LinearLayout
+        android:layout_margin="20sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/SongImage"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:background="@color/white"
+
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bilie_foreground"
+            app:shapeAppearance="@style/RoundImage"/>
 
         <LinearLayout
-            android:layout_margin="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/SongImage"
-                android:layout_width="60sp"
-                android:layout_height="60sp"
-                android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-                android:scaleType="centerCrop"
-                android:src="@mipmap/bilie_foreground"
-                app:shapeAppearance="@style/RoundImage"/>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/SongNameTextView"
+                android:paddingLeft="15sp"
+                android:paddingTop="5sp"
+                android:textColor="@color/black"
+                android:maxLength="30"
+                android:textSize="20sp"
+                android:text="Billie Eilish - Happier Than Ever"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/SongNameTextView"
-                    android:paddingLeft="15sp"
-                    android:paddingTop="5sp"
-                    android:textColor="@color/black"
-                    android:maxLength="30"
-                    android:textSize="20sp"
-                    android:text="Billie Eilish - Happier Than Ever"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"></TextView>
-                <TextView
-                    android:id="@+id/SongAuthorTextView"
-                    android:paddingLeft="15sp"
-                    android:paddingBottom="5sp"
-                    android:textColor="@color/black"
-                    android:gravity="bottom"
-                    android:textSize="15sp"
-                    android:text="Hi its me"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"></TextView>
-
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></TextView>
+            <TextView
+                android:id="@+id/SongAuthorTextView"
+                android:paddingLeft="15sp"
+                android:paddingBottom="5sp"
+                android:textColor="@color/black"
+                android:gravity="bottom"
+                android:textSize="15sp"
+                android:text="Hi its me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></TextView>
 
         </LinearLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
+
 </RelativeLayout>

@@ -1,0 +1,39 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.google.android.material.imageview.ShapeableImageView
+
+        android:id="@+id/SongImage"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:background="@color/white"
+        android:layout_gravity="center|top"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bilie_foreground"
+        app:shapeAppearance="@style/RoundImage"/>
+
+    <TextView
+        android:id="@+id/SongNameTextView"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:text="Bilie elish"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/SongAuthorTextView"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20sp"
+        android:gravity="center"
+        android:text="Unknown"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+</LinearLayout>

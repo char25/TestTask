@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             for (int i = 0; i < 15; i++) {
-                songModels.add(new SongModel(R.mipmap.bilie, "Billie eilish", String.valueOf(i)));
+                songModels.add(new SongModel(R.mipmap.bilie_foreground, "Billie eilish", String.valueOf(i)));
             }
         }
     };
